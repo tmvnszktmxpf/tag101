@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
   const authStatusUI = login.authStatusUI(req, res);
   const html = template.html(title, list,
     `<h2>${title}</h2>${description}
-    <img src= '/images/Depth1.jpg'>
+    <img src= '/images/okr_pc_01.png'>
     `
     , `<a href ="/page/create">create</a>`
     , authStatusUI
