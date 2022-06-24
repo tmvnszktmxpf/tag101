@@ -4,7 +4,7 @@ const app = express()
 const port = 80
 const template = require('./lib/template.js');
 const compression = require('compression');
-const conn = require('./lib/db');
+const db = require('./lib/db');
 const bodyParser = require('body-parser')
 const tagRouter = require('./routes/tag');
 const login = require('./lib/login.js');
@@ -20,6 +20,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
 app.get('*', (req, res, next) => {
+  const conn = db.conn();
   conn.query(`select * from parent_tag`, (err, parent_tags) => {
     // console.log(parent_tags);
     req.list = parent_tags;
