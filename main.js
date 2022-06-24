@@ -20,8 +20,9 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
 app.get('*', (req, res, next) => {
-  conn.query(`select * from topic`, (err, topics) => {
-    req.list = topics;
+  conn.query(`select * from parent_tag`, (err, parent_tags) => {
+    console.log(parent_tags);
+    req.list = parent_tags;
     next();
   });
 });
