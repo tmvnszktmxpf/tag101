@@ -47,15 +47,13 @@ app.use('/login', loginRouter);
 
 
 app.get('/', (req, res) => {
-  const title = 'Welcome';
-  const description = 'Hello, Node.js';
+  const title = 'Hello, class101';
   const list = template.list(req.list);
   const authStatusUI = login.authStatusUI(req, res);
   const html = template.html(title, list,
-    `<h2>${title}</h2>${description}
-    <img src= '/images/okr_pc_01.png'>
+    `<h2>${title}</h2>
     `
-    , `<a href ="/page/create">create</a>`
+    , ``
     , authStatusUI
   );
   res.writeHead(202);
