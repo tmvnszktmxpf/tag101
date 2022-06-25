@@ -35,6 +35,7 @@ a.btn:active {
   box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
   transform: translate3d(0, 1px, 0);
   transition: all 0.025s 0s ease-out;
+  z-index: 999999;
 }
 
 div.cards {
