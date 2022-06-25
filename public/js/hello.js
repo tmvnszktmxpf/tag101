@@ -2,6 +2,9 @@ $(document).ready(function () {
     var zindex = 10;
 
     $("div.card").click(function (e) {
+        document.getElementsByClassName("toggle-info btn").addEventListener("click", function (event) {
+            event.preventDefault()
+        });
 
         var isShowing = false;
 
