@@ -1,14 +1,64 @@
 <html><head></head><body>@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 
+
+
 body {
-  background: #dce1df;
-  color: #4f585e;
-  font-family: &#39;
-  Source Sans Pro&#39;
-  ,
-  sans-serif;
-  text-rendering: optimizeLegibility;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 100%;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
 }
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+.button {
+  width: 170px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-4 {
+  background-color: transparent;
+  border: 3px solid #ff0251;
+  color: #ff0251;
+  transition: .3s;
+}
+
+.button-4:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 a.btn {
   background: #0096a0;
